@@ -7,6 +7,8 @@
 #include <QMouseEvent>
 #include "tray_menu.h"
 
+#include <QDir>
+
 #include <QSettings>
 #include "notification.h"
 
@@ -44,6 +46,8 @@ private slots:
 
 	void on_hide_button_clicked();
 
+    void on_theme_action_clicked(QAction *action);
+
 protected:
     void mousePressEvent(QMouseEvent* event) override {
         if (event->button() == Qt::LeftButton) {
@@ -56,10 +60,16 @@ protected:
         }
     }
 private:
+    void set_theme();
+    QMenu *theme_menu = new QMenu();
+    QFile *main, *title, *tray_menu, *notifi;
+    QString theme = "Light";
+    bool dark = false;
+    QDir *theme_dir = new QDir("themes");
+    QStringList *theme_list;
     QPoint _p;
     Tray_menu* tray = new Tray_menu();
 	void print_Time();
-	bool Dark_theme = false;
     QSettings* config = new QSettings("settings.ini", QSettings::IniFormat);
     QTimer* timer;
 	long hours = 0, minutes = 0, seconds = 0;

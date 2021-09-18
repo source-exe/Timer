@@ -1,0 +1,17 @@
+QWidget {
+    background-color: #F0F0F0;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+QTimeEdit {
+    background-color: #C4C4C4;
+    border-radius: 7px;
+}
+QPushButton {
+    background-color: #C4C4C4;
+    border-radius: 7px;
+}
+QPushButton::hover {
+    background-color: #565656;
+    color: #FFFFFF;
+}
