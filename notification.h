@@ -23,13 +23,14 @@ public:
 	~notification();
 	QSound* alarm = new QSound(":/alarms/Drip.wav");
 	QPushButton* repeat;
+    QPushButton* stop;
 	std::string elapsed_time;
 
 public slots:
 	void hide_notification();
+    void hide_no_anim();
 
 private:
-
 	QTimer* timer = new QTimer();
 	QPropertyAnimation* show_transparency_animation;
 	QPropertyAnimation* hide_transparency_animation;

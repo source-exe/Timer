@@ -1,0 +1,21 @@
+QMenu {
+    background-color: #5EC71F;
+} 
+QMenu::item:selected {
+    background-color: #A4EB78; 
+}
+QMenu::item {
+    background-color: #80E344; 
+    border-radius: 5px;
+}
+QTimeEdit {
+    background-color: #80E344;
+    border-radius: 5px;
+}
+QMenu::item:disabled {
+    color: #595959;
+}
+QMenu::item::disabled:selected {
+    background-color: #80E344;
+    border-radius: 5px;
+}

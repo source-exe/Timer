@@ -2,6 +2,7 @@
 
 Tray_menu::Tray_menu()
 {
+    separator->setSeparator(true);
 	resume_timer_action->setEnabled(false);
 	stop_timer_action->setEnabled(false);
 
@@ -25,7 +26,7 @@ Tray_menu::Tray_menu()
 
 	tray_timer->setDefaultWidget(tray_time);
 	tray_menu->addAction(tray_timer);
-	tray_menu->addSeparator()->setVisible(true);
+    tray_menu->addAction(separator);
 
 	tray_time_select->setDefaultWidget(time_edit_tray);
 	tray_menu->addAction(tray_time_select);
@@ -40,6 +41,8 @@ Tray_menu::Tray_menu()
 
 	tray_menu->addAction(theme_timer_action);
 	tray_menu->addSeparator()->setVisible(true);
+    tray_menu->addAction(mode_switch_action);
+    tray_menu->addSeparator()->setVisible(true);
 	tray_menu->addAction(quit_timer_action);
 
 	backgroundtray->setContextMenu(tray_menu);

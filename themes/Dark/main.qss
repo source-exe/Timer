@@ -1,17 +1,54 @@
-QWidget {
+#background {
+    background-color: #535353;
+    border-radius: 9px;
+}
+#main {
     background-color: #535353;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 }
-QTimeEdit {
+
+#main QTimeEdit {
     background-color: #9D9D9D;
     border-radius: 7px;
 }
-QPushButton {
+
+#main QPushButton {
     background-color: #9D9D9D;
     border-radius: 7px;
 }
-QPushButton::hover {
+
+#main QPushButton::hover {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+#main QToolButton {
+    background-color: #9D9D9D;
+    border-radius: 7px;
+}
+
+#main QToolButton::hover {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+#title #exit_button::hover {
+    background-color: #E71022;
+}
+
+#title {
+    background-color: #9D9D9D;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#title QPushButton{
+    background-color: #9D9D9D;
+    border-radius: 0px;
+}
+
+#title QPushButton:hover{
     background-color: #2C2C2C;
     color: #FFFFFF;
 }

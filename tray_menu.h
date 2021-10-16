@@ -13,6 +13,8 @@ class Tray_menu
 public:
 
 	Tray_menu();
+    QWidgetAction* tray_time_select = new QWidgetAction(NULL);
+    QWidgetAction* tray_timer = new QWidgetAction(NULL);
 	QSystemTrayIcon* backgroundtray = new QSystemTrayIcon();
 	QMenu* tray_menu = new QMenu();
     QAction* show_window_action = new QAction("    Show Window");
@@ -20,14 +22,15 @@ public:
     QAction* stop_timer_action = new QAction("            Stop");
     QAction* start_timer_action = new QAction("            Start");
     QAction* theme_timer_action = new QAction("          Theme");
+    QAction* mode_switch_action = new QAction("           Mode");
     QAction* quit_timer_action = new QAction("            Quit");
+    QAction* separator = new QAction();
 
 	QLabel* tray_time = new QLabel("00:00:00");
 	QTimeEdit* time_edit_tray = new QTimeEdit();
 
 private:
-	QWidgetAction* tray_time_select = new QWidgetAction(NULL);
-	QWidgetAction* tray_timer = new QWidgetAction(NULL);
+
 };
 
 #endif // TRAY_MENU_H
