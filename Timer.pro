@@ -12,7 +12,7 @@ CONFIG += c++11
 QMAKE_TARGET = Timer
 QMAKE_TARGET_DESCRIPTION = Timer
 
-VERSION = 1.7.4
+VERSION = 2.0.0
 
 SOURCES += \
     main.cpp \
