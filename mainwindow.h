@@ -91,7 +91,7 @@ private:
     QSettings* config = new QSettings("settings.ini", QSettings::IniFormat);
     QTimer *stopwatch;
     QTimer *timer;
-    unsigned short int hours = 0, minutes = 0, seconds = 0;
+    short int hours = 0, minutes = 0, seconds = 0;
     Ui::MainWindow* ui;
     notification* notify = new notification();
 };

@@ -16,8 +16,12 @@ void MainWindow::transform_main() {
     }
     ui->time->setText("00:00:00");
     tray->tray_time->setText("00:00:00");
+    ui->resume_button->setEnabled(false);
     ui->stop_button->setEnabled(false);
     ui->start_button->setEnabled(true);
+    tray->resume_timer_action->setEnabled(false);
+    tray->stop_timer_action->setEnabled(false);
+    tray->start_timer_action->setEnabled(true);
     ui->timeEdit->setTime(QTime(0, 0, 0));
     tray->time_edit_tray->setTime(QTime(0, 0, 0));
     seconds = 0;
